@@ -9,7 +9,7 @@
     "start": "nodemon server/index.js",
     "build": "node build/build.js",
     "clean": "rm -rf ./dist/",
-    "prod": "NODE_ENV=production node server/index.js",
+    "prod": "npm install;cross-env NODE_ENV=production node server/index.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue client test/unit/specs"
