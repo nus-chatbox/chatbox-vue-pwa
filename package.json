@@ -8,6 +8,7 @@
     "dev": "nodemon server/index.js",
     "start": "nodemon server/index.js",
     "build": "node build/build.js",
+    "build-deploy": "npm install && node build/build.js && scp -r dist/* chatbox@www.quack.press:~/chatbox-vue-pwa/dist/",
     "clean": "rm -rf ./dist/",
     "prod": "npm install;cross-env NODE_ENV=production node server/index.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
