@@ -5,17 +5,14 @@
   "author": "KnightNiwrem <merwinwee@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nodemon server/index.js",
-    "start": "nodemon server/index.js",
+    "dev": "node build/dev-server.js",
+    "start": "node build/dev-server.js",
     "build": "node build/build.js",
-    "clean": "rm -rf ./dist/",
-    "prod": "npm install;cross-env NODE_ENV=production node server/index.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue client test/unit/specs"
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
-    "nodemon": "^1.12.0",
     "vue": "^2.4.2",
     "vue-router": "^2.7.0"
   },
